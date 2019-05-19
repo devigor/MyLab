@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>01 - Revisão Herança Prototipal</title>
+</head>
+<body>
+  <script>
+    // in es6
+    class Animal {
+      constructor(kind, sound) {
+        this.kind = kind;
+        this.sound = sound;
+      }
+
+      hello() {
+        console.log(`${this.sound} I'm a ${this.kind}`);
+      }
+      // method static - só a classe pode acessar ele
+      static info() {
+        console.log('This is a class to create animals');
+      }
+      // set and get
+      get name() {
+        console.log('My name is Jack!')
+      }
+      set nickname(nick) {
+        this.nick = nick;
+      }
+    }
+  </script>
+</body>
+</html>

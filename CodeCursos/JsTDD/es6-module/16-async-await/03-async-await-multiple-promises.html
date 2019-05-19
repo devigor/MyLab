@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>03 - Async/Await Multiple Promises</title>
+</head>
+<body>
+  <script>
+    async function getUsers(users) {
+
+      // Multiplos usuários
+      const promises = users.map(user => {
+        return fetch(`https://api.github.com/users/${user}`).then(r => r.json());
+      })
+      // Resolvendo as promises
+      const people = await Promise.all(promises);
+      console.log(people.map(p => p.url))
+
+      // const igor = fetch('https://api.github.com/users/devigor').then(r => r.json());
+      // const will = fetch('https://api.github.com/users/willianjusten').then(r => r.json());
+
+      // // Promise.all irá resolver todas as promises passadas, ele aceita um array
+      // const promises = await Promise.all([igor, will]);
+      // return promises.map(promise => {
+      //   console.log(promise.blog)
+      // })
+    }
+    getUsers(['devigor', 'zenorocha', 'willianjusten']);
+  </script>
+</body>
+</html>

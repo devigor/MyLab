@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai');
+
+div {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 40px;
+  font-family: 'Baloo Bhai', serif;
+  color: #0CEBEB;
+  
+}
+
+span {
+  color: red;
+}

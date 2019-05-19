@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Spread Dentro de Função</title>
+</head>
+<body>
+    <script>
+        function makeSandwiche(bread, cheese, sauce) {
+            console.log(`Your sadwich with ${bread} bread, ${cheese} cheese and ${sauce} is done!`);
+        }
+
+        const ingredients = ['white', 'cheedar', 'barbecue'];
+        makeSandwiche(...ingredients);
+    </script>
+</body>
+</html>
