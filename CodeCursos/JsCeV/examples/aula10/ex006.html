@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+  <style>
+    #area {
+      font: normal 20pt Arial;
+      background: rgb(42, 139, 42);
+      color: white;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="area">
+    Interaja...
+  </div>
+  <script>
+    var area = document.querySelector('div#area')
+    area.addEventListener('click', eClick)
+    area.addEventListener('mouseenter', eEnter)
+    area.addEventListener('mouseout', eExit)
+
+    function eClick() {
+      area.innerText = 'Click!!'
+      area.style.background = 'tomato'
+    }
+    function eEnter() {
+      area.innerText = 'Enter'
+    }
+    function eExit() {
+      area.innerText = 'Exit'
+      area.style.background = 'rgb(42, 139, 42)'
+    }
+  </script>
+</body>
+</html>

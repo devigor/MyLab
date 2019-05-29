@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DENTRAN</title>
+  <style>
+    body {
+      font: normal 15pt Arial;
+      background: #929292;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Multas</h1>
+  <input type="number" name="velocidade" id="vel">
+  <button onclick="verificar()">Verificar</button>
+  <div id="result"></div>
+
+  <script>
+    function verificar() {
+      var vel = document.querySelector('input#vel').value
+      var res = document.querySelector('div#result')
+      //res.innerHTML = vel > 60 ? 'MULTADO' : 'NÃO MULTADO'
+      if (Number(vel) > 60) {
+        res.style.color = 'red'
+        res.innerHTML = '<h1>MULTADO</h1>'
+      } else {
+        res.style.color = 'green'
+        res.innerHTML = '<h1>NÃO MULTADO</h1>'
+      }
+    }
+  </script>
+</body>
+</html>

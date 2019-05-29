@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DOM</title>
+</head>
+<body>
+  <h1>Somando Valores</h1>
+  <input type="number" name="number1" id="number1">
+  <input type="number" name="number2" id="number2">
+  <button onclick="soma()">Somar</button>
+  <br>
+  <div id="result"></div>
+
+  <script>
+    function soma() {
+      var n1 = document.querySelector('input#number1').value
+      var n2 = document.querySelector('input#number2').value
+      var sum  = Number(n1) + Number(n2)
+      var result = document.querySelector('div#result')
+      result.innerHTML = `<h3>Resultado: ${sum}</strong>`
+    }
+  </script>
+</body>
+</html>
